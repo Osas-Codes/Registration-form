@@ -14,6 +14,7 @@ if (isset($_POST['submit'])){
   // $userdata = "./userdata.csv";
   $handle = fopen("userdata.csv", "a");
   fputcsv($handle, $form_data);
+  fclose($handle);
 }else {
   echo "No data";
 }
